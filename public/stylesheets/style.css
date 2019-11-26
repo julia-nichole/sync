@@ -1,11 +1,8 @@
 html{
   background-color: #ede7d9
 }
-body {
 
-  padding: 50px;
-  font: 14px 'Noto Sans KR', sans-serif;
-}
+
 
 a {
   color: #00B7FF;
@@ -15,6 +12,9 @@ a {
   display:flex;
  align-content: center;
 }
-div{
-  background-image:('https://i.imgur.com/4jyQ4yz.png');
+body{
+  height: 3000px;
+}
+.right {
+  font-size: 20px;
 }
