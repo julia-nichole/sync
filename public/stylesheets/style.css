@@ -17,4 +17,13 @@ body{
 }
 .right {
   font-size: 20px;
+  margin: auto ;
+  padding: 5px 15px 5px 5px;
+}
+#logo{
+  padding: 5px 5px 5px 5px;
+}
+.card{
+  background-color:rgb(230, 154, 145);
+
 }

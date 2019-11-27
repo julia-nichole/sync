@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
-
+var categoriesCtrl = require('../controllers/categories');
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/',categoriesCtrl.general);
+
 
 module.exports = router;
