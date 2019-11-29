@@ -1,4 +1,4 @@
-<!-- form page for general information  --><html lang="en"></html>
+<html lang="en"></html>
   <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,14 +15,9 @@
             <% } else { %>
             <a class="right" href="/auth/google">Login</a>
             <% } %>
-    
-   
-    
-          </nav>
+        </nav>
         </head>
-        <footer class="page-footer"> 
-
-            </footer>
+        <footer class="page-footer"> </footer>
 <body>
 
 
@@ -43,7 +38,7 @@
  
 
 
-      <form action="#" method="POST">
+      <form id="new-form" action="/categories/new" method="POST">
             
                 <div>
                   <label for="name">Name:</label>
@@ -55,17 +50,24 @@
                 </div>
                 <label> Birth control </label>
                 <select class="browser-default" name="birth control">
-                         <option   value="none">none</option>
+                         <option   value="none">None</option>
                         <option  value="iud">IUD</option>
                         <option  value="pill">Pill</option>
                         <option  value="nuvaring">Nuvaring</option>
                         <option   value="shot">Depo-Provera (shot)</option>
                 </select >
-
+                <label >Weight:</label>
+                <input type="number" >
+              </div>
     
+              <div>
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                            
+                </button>
+                                
+              </div>
                   
 </body>
-
 
 
 

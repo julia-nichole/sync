@@ -1,6 +1,9 @@
 html{
-  background-color: #ede7d9
-}
+  background-color: #ede7d9;
+
+    height: 100%;
+    margin: 0;
+  }
 
 
 
@@ -28,5 +31,12 @@ body{
 
 }
 label{
+  font-display: bold;
   font-size: 18px;
+  color:rgb(69, 66, 66);
+  padding:10px;
+}
+.footer,
+.push {
+  height: 50px;
 }
