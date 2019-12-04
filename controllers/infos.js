@@ -10,7 +10,9 @@ module.exports = {
 function index(req, res) {
     res.render('info/index',{
     user: req.user,
-    name: req.query.name})
+    name: req.query.name,
+    Info: req.query.name, 
+})
 };
 
 
@@ -25,10 +27,15 @@ let info = new Info(req.body);
 }
 
 function newForm(req, res) {
+   Info.find({},function(err,infos){
     res.render('info/new',{
+        infos,
         user: req.user,
-    name: req.query.name
+    name: req.query.name, 
+     
         });
+   })
+   
 
     }
     
