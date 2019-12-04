@@ -3,8 +3,8 @@ let Info = require('../models/info');
 module.exports = {
   index,
     create,
-    new : newForm
-
+    new : newForm,
+    update
 };
 
 function index(req, res) {
@@ -30,4 +30,14 @@ function newForm(req, res) {
     name: req.query.name
         });
 
+    }
+    
+    function update(req, res) {
+       Info.findById(req.params.id, function(err, info){
+            info.name = req.body.newName;
+            info.save(function(err){
+                if (err) return res.redirect('/info');
+                res.redirect(`/info/${req.params.id}`);
+            })
+        })
     }
