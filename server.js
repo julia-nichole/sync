@@ -1,15 +1,16 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var session = require('express-session');
-var passport = require('passport');
-var methodOverride = require('method-override')
-var indexRouter = require('./routes/users');
-var usersRouter = require('./routes/index');
-var infoRouter = require('./routes/info');
-var app = express();
+let createError = require('http-errors');
+let express = require('express');
+let path = require('path');
+let cookieParser = require('cookie-parser');
+let logger = require('morgan');
+let session = require('express-session');
+let passport = require('passport');
+let methodOverride = require('method-override')
+let indexRouter = require('./routes/users');
+let usersRouter = require('./routes/index');
+let infoRouter = require('./routes/info');
+let cycleRouter = require('./routes/cycles')
+let app = express();
 
 //config
 require('dotenv').config();
@@ -39,6 +40,7 @@ app.use(methodOverride('_method'))
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/info', infoRouter);
+app.use('/cycle', cycleRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

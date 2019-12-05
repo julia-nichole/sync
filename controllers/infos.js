@@ -62,6 +62,8 @@ function newForm(req, res) {
        Info.findById(req.params.id, function (err, infos) {
             infos.name = req.body.name
             infos.age = req.body.age
+            infos.weight = req.body.weight
+            infos.birthControl = req.body.birthControl
             infos.save(function (err) {
                 if (err) return res.render('/error');
                 res.render(`info/`, {
