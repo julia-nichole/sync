@@ -40,3 +40,6 @@ label{
 .push {
   height: 50px;
 }
+table {
+  background-color:rgb(230, 154, 145,.4);
+}

@@ -7,7 +7,7 @@ let infoCtrl = require('../controllers/infos');
 router.get('/',infoCtrl.index);
 router.post('/', infoCtrl.create);
 router.get('/new', infoCtrl.new)
-
+router.get('/:id', infoCtrl.update)
 
 
 module.exports = router;

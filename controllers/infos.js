@@ -41,10 +41,8 @@ function newForm(req, res) {
     
     function update(req, res) {
        Info.findById(req.params.id, function(err, info){
-            info.name = req.body.newName;
-            info.save(function(err){
-                if (err) return res.redirect('/info');
-                res.redirect(`/info/${req.params.id}`);
-            })
-        })
-    }
+  res.render('info/show',{info, user: req.user,
+    name: req.query.name, });
+               
+            });
+     }
