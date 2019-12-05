@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+</head>
+<nav class= "pink ">
+        <div class="nav-wrapper">
+          <a class="brand-logo" id ="logo" href="/">Sync</a>
+          <a class="right"href="/info/new">Profile</a>
+          <a class="right"href="/users">Forms</a>
+          <a class="right"href="/cycle">Cycles</a>
+          
+      </nav>
+      </head>
+      <footer class="page-footer"> </footer>
+<body>
+        <table  id="list">
+                <thead>
+                  <tr>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Flow</th>
+                
+                  </tr>
+                </thead>
+                <tbody>
+                  <% cycles.forEach(function(c) { %>
+                    <tr>
+                      <td><%= c.start %></td>
+                      <td><%= c.end %></td>
+                      <td><%= c.flow %></td>
+                      <td><a class="btn waves-effect waves-light" href="/cycle/<%=c._id%>/edit">Edit</a></td> 
+
+                    </tr>
+                    <% }); %>
+                  </tbody>
+                </table>
+              </body>
+              </html>

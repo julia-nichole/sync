@@ -3,12 +3,20 @@ let Schema = mongoose.Schema;
 
 let cycleSchema = new Schema({
 start:{
-    type: Date
+    type: Date,
+    default: function () {
+        return new Date().getDate();
+  }
 },
 end:{
- type: Date
+ type: Date,
+ default: function () {
+    return new Date().getDate();
+}
 },
+
 flow:{
+    type:String,
     enum:['light','medium','heavy']
 }
 })

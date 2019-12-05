@@ -3,7 +3,8 @@ let Cycle = require('../models/cycle');
 module.exports = {
     index,
     create,
-  new:  newForm
+  new:  newForm,
+  edit
 }
  
 function index(req, res) {
@@ -30,6 +31,15 @@ function create (req, res){
           
              });
         })
-        
-     
-         }
+ }
+
+ function edit(req, res) {
+    Cycle.findById(req.params.id, function (err, cycles) {
+         res.render('cycle/edit', {
+             user: req.user,
+             cycles,
+          
+         })
+     })
+ }
+ 
