@@ -4,6 +4,8 @@ module.exports = {
   index,
     create,
     new : newForm,
+    show,
+    edit,
     update
 };
 
@@ -29,7 +31,7 @@ let info = new Info(req.body);
 function newForm(req, res) {
    Info.find({},function(err,infos){
     res.render('info/new',{
-        infos,
+       infos,
         user: req.user,
     name: req.query.name, 
      
@@ -39,10 +41,34 @@ function newForm(req, res) {
 
     }
     
-    function update(req, res) {
-       Info.findById(req.params.id, function(err, info){
-  res.render('info/show',{info, user: req.user,
+    function show(req, res) {
+       Info.findById(req.params.id, function(err, infos){
+  res.render('info/show',{infos, user: req.user,
     name: req.query.name, });
                
             });
      }
+
+     function edit(req, res) {
+       Info.findById(req.params.id, function (err, infos) {
+            res.render('info/edit', {
+                user: req.user,
+                infos,
+             
+            })
+        })
+    }
+    function update(req, res) {
+       Info.findById(req.params.id, function (err, infos) {
+            infos.name = req.body.name
+            infos.age = req.body.age
+            infos.save(function (err) {
+                if (err) return res.render('/error');
+                res.render(`info/`, {
+                    user: req.user,
+                    infos,
+               
+                });
+            })
+        })
+    }

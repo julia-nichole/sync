@@ -22,7 +22,8 @@
                   <div class="card ">
                     <div class="card-content white-text">
                       <span class="card-title">Hola Chica!</span>
-                      <p> This is where we will store any information from your general info form !
+                      <p> This is where we will store any information from your general info form!
+                        Need to edit something ? No problem just click the edit button down below.
                         </p>
                     </div>
                    </div>
@@ -44,7 +45,7 @@
         <td><%= i.age %></td>
         <td><%= i.birthControl %></td>
         <td><%= i.weight %></td>
-        <td><a href="/info/<%= i._id %>">Edit</a></td>
+        <td><a href="/info/<%=i._id%>/edit">Edit</a></td>
       </tr>
       <% }); %>
     </tbody>
