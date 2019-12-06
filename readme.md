@@ -8,6 +8,24 @@
 ### AAV i will have access to non of the apps features until logging in
 
 # Wireframes 
-
+![Image description](https://i.imgur.com/Cev8q9I.jpg)
 
 # ERD
+![Image description](https://i.imgur.com/J4MeJHp.jpg)
+# ScreenShots 
+![Image description](https://i.imgur.com/TsjwfiU.png)
+![Image description](https://i.imgur.com/fRqgB35.png)
+![Image description](https://i.imgur.com/cJJXVDS.png)
+# Tech used 
+
+* Materialize
+
+* css
+
+* Javascript
+
+* GoogleOAuth
+
+* MongoDB
+
+* Heroku

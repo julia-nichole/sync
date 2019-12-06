@@ -25,28 +25,47 @@
                 <div class="col s12 m12">
                   <div class="card ">
                     <div class="card-content white-text">
-                      <span class="card-title">Howdy!</span>
-                      <p>Below is a form so we can store your cycle information.
+                      <span class="card-title">Ciao!</span>
+                      <p>Below is a form so we can store daily your symptoms!
                         </p>
                     </div>
                    
                     </div>
                   </div>
                 </div>
-    <form id="new-form" action="/cycle" method="POST">
-     <label>First day of period: </label>	
-	    <input   class="datepicker" type="date" name="start">
+    <form id="new-form" action="/symptoms" method="POST">
+        <label> Mood:  </label>
+        <select class="browser-default" name="mood">
+                <option  value="happy">Happy!</option>
+                <option  value="sad"> Sad</option>
+                <option  value="sensitive">Sensitive</option>
+                <option  value="irritable">Irritable</option>
+        </select >
 	
-    <label>last day of period: </label>	
-         <input   class="datepicker" type="date" name="end">
+        <label> Skin:  </label>
+        <select class="browser-default" name="skin">
+                <option  value="great">Great!</option>
+                <option  value="break-outs">Break Outs</option>
+                <option  value="oily">Oily</option>
+                <option  value="dry">Dry</option>
+        </select >
          
-    <label> Flow </label>
-          <select class="browser-default" name="flow">
-                  <option  value="light">Light</option>
-                  <option  value="medium">Medium</option>
-                  <option  value="heavy">Heavy</option>
+    <label> Sexual activity:  </label>
+          <select class="browser-default" name="sexualActivity">
+                  <option  value="protected">Protected</option>
+                  <option  value="unprotected">Unprotected</option>
+                  <option  value="none">None</option>
  
           </select >
+         
+    <label>Pain level 1-5 </label>
+        <select class="browser-default" name="pain">
+                <option  value="1">1</option>
+                <option  value="2">2</option>
+                <option  value="3">3</option>
+                <option  value="4">4</option>
+                <option  value="5">5</option>
+        </select>
           <div>
                 <button class="btn waves-effect waves-light" type="submit" name="action">Submit
                             
