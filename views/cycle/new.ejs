@@ -12,8 +12,7 @@
         <div class="nav-wrapper">
           <a class="brand-logo" id ="logo" href="/">Sync</a>
           <a class="right"href="/info/new">Profile</a>
-          <a class="right"href="/users">Forms</a>
-          <a class="right"href="/cycle">Cycles</a>
+         <a class="right"href="/cycle"> New Cycle</a>
           
       </nav>
       </head>
@@ -35,7 +34,12 @@
                       <td><%= c.end %></td>
                       <td><%= c.flow %></td>
                       <td><a class="btn waves-effect waves-light" href="/cycle/<%=c._id%>/edit">Edit</a></td> 
-
+                      <td>
+                            <form action="/cycle/<%=c._id%>?_method=DELETE" class="delete-form" method="POST">
+                              <button class="btn-floating waves-effect waves-light red">delete</button>
+                            </form>
+                          </td>
+                
                     </tr>
                     <% }); %>
                   </tbody>
